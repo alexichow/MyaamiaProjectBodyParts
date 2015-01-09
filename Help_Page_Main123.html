@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+<!-- Title the Page accordingly************************************************************************************-->
+        <title>Main 123 Help Page</title>
+<!-- Link the css stylesheet ***************************************************************************-->
+        <link href="Main123_Help_Page_CSS.css" rel="stylesheet" type="text/css" />
+<!-- Begin JavaScript code ***************************************************************************-->
+        <SCRIPT>
+// load home cube images ************************************************************************************		
+			home0 = new Image(153,152)
+			home0.src = "Page_Elements/Sidebar_Nav_Home_Cube.png"
+			
+			home1 = new Image(153,152)
+			home1.src = "Page_Elements/Sidebar_Nav_Home_Cube_backHL.png"
+			
+			home2 = new Image(153,152)
+			home2.src = "Page_Elements/Sidebar_Nav_Home_Cube_homeHL.png"
+			
+			home3 = new Image(153,152)
+			home3.src = "Page_Elements/Sidebar_Nav_Home_Cube_forwardHL.png"
+// load 123 cube images ************************************************************************************		
+			smallNav0 = new Image(151,150)
+			smallNav0.src = "Page_Elements/Sidebar_Nav_123_Cube.png"
+			
+			smallNav1 = new Image(151,150)
+			smallNav1.src = "Page_Elements/Sidebar_Nav_123_Cube_1HL.png"
+			
+			smallNav2 = new Image(151,150)
+			smallNav2.src = "Page_Elements/Sidebar_Nav_123_Cube_2HL.png"
+			
+			smallNav3 = new Image(151,150)
+			smallNav3.src = "Page_Elements/Sidebar_Nav_123_Cube_3HL.png"
+// load ? cube images ************************************************************************************		
+			question0 = new Image(151,151)
+			question0.src = "Page_Elements/Sidebar_Nav_Question_Cube.png"
+			
+			question1 = new Image(151,151)
+			question1.src = "Page_Elements/Sidebar_Nav_Question_CubeHL.png"
+			
+// function for highlighting the sidebar home cube image when the mouse hovers over the part **********************************
+			function hoverOverHome(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("sideHome").src = home1.src; return true; // highlight back arrow
+						break;
+					 case 2: 
+						document.getElementById("sideHome").src = home2.src; return true; // highlight home
+						 break;
+					 case 3: 
+						document.getElementById("sideHome").src = home3.src; return true; // highlight forward arrow
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original home cube image *********************************************************
+			function originalHome()
+			{
+				document.getElementById("sideHome").src = home0.src; return true; 
+			}
+			
+// function for highlighting the sidebar 123 cube image when the mouse hovers over the part **********************************
+			function hoverOverSide123(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("side123").src = smallNav1.src; return true; // highlight 1
+						break;
+					 case 2: 
+						document.getElementById("side123").src = smallNav2.src; return true; // highlight 2
+						 break;
+					 case 3: 
+						document.getElementById("side123").src = smallNav3.src; return true; // highlight 3
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original side 123 cube image *********************************************************
+			function originalSide123()
+			{
+				document.getElementById("side123").src = smallNav0.src; return true; 
+			}
+		</SCRIPT>
+    </head>
+    <body> 
+    
+<!-- Sidebar Navigation Begins ****************************************************************************-->
+        <nav id="sidebarNavigation">
+          <div id="sideHomeNavCube"> <img src="Page_Elements/Sidebar_Nav_Home_Cube.png" id="sideHome" alt=" sidebar home navigation cube" usemap="#Map2">
+              <map name="Map2">
+                <area shape="poly" coords="76,21,127,49,77,77,26,49" href="Main_Page_Torso.html" alt="home link" title="Home" onMouseOver="hoverOverHome(2)" onMouseOut="originalHome()">
+                <area shape="poly" coords="24,54,75,81,75,132,24,104" href="Main_Page_Torso.html" alt="back link" title="Back" onMouseOver="hoverOverHome(1)" onMouseOut="originalHome()">
+                <area shape="poly" coords="129,54,79,81,80,131,130,103" href="Observe_Page_Torso.html" alt="forward link" title="Forward" onMouseOver="hoverOverHome(3)" onMouseOut="originalHome()">
+              </map>
+          </div>
+          
+          <div id="side123NavCube"> <img src="Page_Elements/Sidebar_Nav_123_Cube.png" id="side123" alt="sidebar 123 navigation cube" usemap="#Map3">
+              <map name="Map3">
+                <area shape="poly" coords="24,52,74,79,74,127,24,101" href="Observe_Page_Torso.html" alt="1: Observe link" title="1: Observe" onMouseOver="hoverOverSide123(1)" onMouseOut="originalSide123()">
+                <area shape="poly" coords="76,21,28,48,77,76,124,49" href="Try_Page_Torso.html" alt="2: Try link" title="2: Try" onMouseOver="hoverOverSide123(2)" onMouseOut="originalSide123()">
+                <area shape="poly" coords="128,51,78,79,79,127,128,100" href="Test_Page_Torso.html" alt="3: Test link" title="3: Test" onMouseOver="hoverOverSide123(3)" onMouseOut="originalSide123()">
+              </map>
+           </div>
+        </nav>
+        
+        <div id="whiteBG"><img src="Page_Elements/BG_block.png" alt="background block">
+        <div id="helpMain123"><img src="Page_Elements/Main_Nav_Cubes123_Help.png" alt="main 123 small"></div>
+        <div id="h11"><h1>Main 123 Page Instructions.</h1></div>
+        <div id="p1"><p>The main 123 page is used to navigate to between the torso section pages.
+        <br /> To navigate to one of the pages click on either 1, 2, or 3</p></div>
+		<div id="ul1"><ul>
+         <br /><li>Click 1: This will take you to the Observe module page.</li>
+         <br /> <li>Click 2: This will take you to the Try module page.</li>
+         <br /> <li>Click 3: This will take you to the Test module page.</li>
+        </ul></div>
+        <div id="h21"><h2>Sidebar Navigation Information</h2></div>
+        <div id="p2"><p>The sidebar navigation buttons are used to quickly navigate between pages. <br /> There are three different navigation cubes you will encounter.</p></div>
+        <div id="helpHomeNav"><img src="Page_Elements/Sidebar_Nav_Home_Cube_Help.png" alt="sidebar home small"></div>
+        <div id="p3"><p>Clicking the home icon will take you back to the home page. <br /> The forward and back arrows take you sequentially through the site.</p></div>
+        <div id="help123Nav"><img src="Page_Elements/Sidebar_Nav_123_Cube_Help.png" alt="sidebar 123 small"></div>
+        <div id="p4"><p>Clicking the 123 buttons will take you to the page that corresponds  <br /> with the number chosen.</p></div>
+        <div id="helpQuestionNav"><img src="Page_Elements/Sidebar_Nav_Question_Cube_Help.png" alt="sidebar ? small"></div>
+        <div id="p5"><p>Clicking the question mark buttons will open a help and information  <br />page in a new browser tab.</p></div>
+        </div>
+        
+    </body>
+</html>

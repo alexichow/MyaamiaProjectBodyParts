@@ -1,0 +1,40 @@
+
+body {
+	position:relative;
+	background-image:url(Page_Elements/Cube_Slice_BG.png);
+ 	background-repeat:repeat-x;
+	/*background-image:url(Page_Elements/Main_Page_Background.png);
+	background-repeat:no-repeat;*/
+	 min-width:920px;
+	background-position:left top;
+	background-color: #FFF;
+	/*width:1440px;*/
+ 
+}
+img {
+	border-style:none;
+}
+#mainNavCubes{
+ /*position:absolute;
+ left:50%;
+ top:170px;*/
+  position: absolute; 
+  left: 45%; 
+  top: 55px; 
+  margin-left: -240px;
+}
+#sideHomeNavCube{
+ position:absolute;
+ left:7px;
+ top:5px;
+}
+#side123NavCube{
+ position:absolute;
+ left:7px;
+ top:157px;
+}
+#sideQuestionCube{
+ position:absolute;
+ left:7px;
+ top:307px;
+}

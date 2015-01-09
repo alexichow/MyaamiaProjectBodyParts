@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+		<meta charset="utf-8" />
+		<!-- Title the Page **************************************************************************************-->
+		<title>Torso Main Page</title>
+
+		<!-- Link the css stylesheet *****************************************************************************-->
+		<link href="Main_Torso_CSS.css" rel="stylesheet" type="text/css" />
+		<!-- Begin JavaScript code ***************************************************************************-->
+		<SCRIPT>
+// load main 123 images ************************************************************************************		
+			main0 = new Image(640,556)
+			main0.src = "Page_Elements/Main_Nav_Cubes123.png"
+			
+			main1 = new Image(640,556)
+			main1.src = "Page_Elements/Main_Nav_Cubes123_1HL.png"
+			
+			main2 = new Image(640,556)
+			main2.src = "Page_Elements/Main_Nav_Cubes123_2HL.png"
+			
+			main3 = new Image(640,556)
+			main3.src = "Page_Elements/Main_Nav_Cubes123_3HL.png"
+// load home cube images ************************************************************************************		
+			home0 = new Image(153,152)
+			home0.src = "Page_Elements/Sidebar_Nav_Home_Cube.png"
+			
+			home1 = new Image(153,152)
+			home1.src = "Page_Elements/Sidebar_Nav_Home_Cube_backHL.png"
+			
+			home2 = new Image(153,152)
+			home2.src = "Page_Elements/Sidebar_Nav_Home_Cube_homeHL.png"
+			
+			home3 = new Image(153,152)
+			home3.src = "Page_Elements/Sidebar_Nav_Home_Cube_forwardHL.png"
+// load 123 cube images ************************************************************************************		
+			smallNav0 = new Image(151,150)
+			smallNav0.src = "Page_Elements/Sidebar_Nav_123_Cube.png"
+			
+			smallNav1 = new Image(151,150)
+			smallNav1.src = "Page_Elements/Sidebar_Nav_123_Cube_1HL.png"
+			
+			smallNav2 = new Image(151,150)
+			smallNav2.src = "Page_Elements/Sidebar_Nav_123_Cube_2HL.png"
+			
+			smallNav3 = new Image(151,150)
+			smallNav3.src = "Page_Elements/Sidebar_Nav_123_Cube_3HL.png"
+// load ? cube images ************************************************************************************		
+			question0 = new Image(151,151)
+			question0.src = "Page_Elements/Sidebar_Nav_Question_Cube.png"
+			
+			question1 = new Image(151,151)
+			question1.src = "Page_Elements/Sidebar_Nav_Question_CubeHL.png"
+			
+			
+// function for highlighting the main 123 cube image when the mouse hovers over the part **********************************
+			function hoverOverMain(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("mainNav123").src = main1.src; return true; // highlight 1
+						break;
+					 case 2: 
+						document.getElementById("mainNav123").src = main2.src; return true; // highlight 2
+						 break;
+					 case 3: 
+						document.getElementById("mainNav123").src = main3.src; return true; // highlight 3
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original main123 image *********************************************************
+			function originalMain()
+			{
+				document.getElementById("mainNav123").src = main0.src; return true; 
+			}
+			
+// function for highlighting the sidebar home cube image when the mouse hovers over the part **********************************
+			function hoverOverHome(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("sideHome").src = home1.src; return true; // highlight back arrow
+						break;
+					 case 2: 
+						document.getElementById("sideHome").src = home2.src; return true; // highlight home
+						 break;
+					 case 3: 
+						document.getElementById("sideHome").src = home3.src; return true; // highlight forward arrow
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original home cube image *********************************************************
+			function originalHome()
+			{
+				document.getElementById("sideHome").src = home0.src; return true; 
+			}
+			
+// function for highlighting the sidebar 123 cube image when the mouse hovers over the part **********************************
+			function hoverOverSide123(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("side123").src = smallNav1.src; return true; // highlight 1
+						break;
+					 case 2: 
+						document.getElementById("side123").src = smallNav2.src; return true; // highlight 2
+						 break;
+					 case 3: 
+						document.getElementById("side123").src = smallNav3.src; return true; // highlight 3
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original side 123 cube image *********************************************************
+			function originalSide123()
+			{
+				document.getElementById("side123").src = smallNav0.src; return true; 
+			}
+			
+// function for highlighting the question cube image when the mouse hovers over the part **********************************
+			function hoverOverQuestion()
+			{
+				document.getElementById("question").src = question1.src; return true; // highlight ?
+			}
+			
+// function for changing to the original question cube image *********************************************************
+			function originalQuestion()
+			{
+				document.getElementById("question").src = question0.src; return true; 
+			}
+		</SCRIPT>
+		</head>
+
+		<body>
+<!-- Main 123 Navigation Begins ***************************************************************************-->
+<nav id="mainNavigation">
+          <div id="mainNavCubes"> <img src="Page_Elements/Main_Nav_Cubes123.png" id="mainNav123" alt="Main 123 Navigation Cubes" width="640" height="556" usemap="#Map">
+    <map name="Map">
+              <area shape="poly" coords="195,68,304,129,306,236,196,297,85,237,85,129" href="Observe_Page_Torso.html" alt="Observe" title="1: Observe" onMouseOver="hoverOverMain(1)" onMouseOut="originalMain()">
+              <area shape="poly" coords="439,67,546,127,548,235,437,292,332,233,331,126" href="Try_Page_Torso.html" alt="Try" title="2: Try" onMouseOver="hoverOverMain(2)" onMouseOut="originalMain()">
+              <area shape="poly" coords="319,248,429,307,430,414,321,474,213,415,212,307" href="Test_Page_Torso.html" alt=" Test" title="3: Test" onMouseOver="hoverOverMain(3)" onMouseOut="originalMain()">
+            </map>
+  </div>
+        </nav>
+<!-- Sidebar Navigation Begins ****************************************************************************-->
+<nav id="sidebarNavigation">
+          <div id="sideHomeNavCube"> <img src="Page_Elements/Sidebar_Nav_Home_Cube.png" id="sideHome" alt=" sidebar home navigation cube" usemap="#Map2">
+    <map name="Map2">
+              <area shape="poly" coords="76,21,127,49,77,77,26,49" href="#"  alt="home link" title="Home" onMouseOver="hoverOverHome(2)" onMouseOut="originalHome()">
+              <area shape="poly" coords="24,54,75,81,75,132,24,104" href="#" alt="back link" title="Back" onMouseOver="hoverOverHome(1)" onMouseOut="originalHome()">
+              <area shape="poly" coords="129,54,79,81,80,131,130,103" href="Observe_Page_Torso.html" alt="forward link" title="Forward" onMouseOver="hoverOverHome(3)" onMouseOut="originalHome()">
+            </map>
+  </div>
+          <div id="side123NavCube"> <img src="Page_Elements/Sidebar_Nav_123_Cube.png" id="side123" alt="sidebar 123 navigation cube" usemap="#Map3">
+    <map name="Map3">
+              <area shape="poly" coords="24,52,74,79,74,127,24,101" href="Observe_Page_Torso.html" alt="1: Observe link" title="1: Observe" onMouseOver="hoverOverSide123(1)" onMouseOut="originalSide123()">
+              <area shape="poly" coords="76,21,28,48,77,76,124,49" href="Try_Page_Torso.html" alt="2: Try link" title="2: Try" onMouseOver="hoverOverSide123(2)" onMouseOut="originalSide123()">
+              <area shape="poly" coords="128,51,78,79,79,127,128,100" href="Test_Page_Torso.html" alt="3: Test link" title="3: Test" onMouseOver="hoverOverSide123(3)" onMouseOut="originalSide123()">
+            </map>
+  </div>
+          <div id="sideQuestionCube"><img src="Page_Elements/Sidebar_Nav_Question_Cube.png" id="question" alt="sidebar help cube" usemap="#Map4">
+    <map name="Map4">
+              <area shape="poly" coords="76,20,25,49,23,100,77,128,130,99,128,48" href="Help_Page_Main123.html" alt="Help Information link" title="Help" onMouseOver="hoverOverQuestion()" onMouseOut="originalQuestion()">
+            </map>
+  </div>
+        </nav>
+</body>
+</html>

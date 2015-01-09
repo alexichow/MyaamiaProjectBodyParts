@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+<!-- Title the Page ************************************************************************************-->
+        <title>Test Torso Page</title>
+<!-- Link the css stylesheet ***************************************************************************-->
+        <link href="Test_Torso_CSS.css" rel="stylesheet" type="text/css" />
+<!-- Begin JavaScript code ***************************************************************************-->
+      <SCRIPT>
+	  var pause = 0;
+// load front images ************************************************************************************		
+			front0 = new Image(243,745)
+			front0.src = "Torso_images/Torso_Front_Highlights/front_head_HL.png"
+			
+			front1 = new Image(243,745)
+			front1.src = "Torso_images/Torso_Front_Highlights/front_neck_HL.png"
+			
+			front2 = new Image(243,745)
+			front2.src = "Torso_images/Torso_Front_Highlights/front_chest_HL.png" 
+			
+			front3 = new Image(243,745)
+			front3.src = "Torso_images/Torso_Front_Highlights/front_stomach_HL.png" 
+			
+			front4 = new Image(243,745)
+			front4.src = "Torso_images/Torso_Front_Highlights/front_lap_HL.png"   
+			
+			front5 = new Image(243,745)
+			front5.src = "Torso_images/Torso_Front_Highlights/front_right_shoulder_HL.png"     
+			
+			front6 = new Image(243,745)
+			front6.src = "Torso_images/Torso_Front_Highlights/front_left_shoulder_HL.png" 
+			
+			front7 = new Image(243,745)
+			front7.src = "Torso_images/Torso_Front_Highlights/front_blank_figure.png"
+			
+// load back images ***************************************************************************************
+			back0 = new Image(202,601)
+			back0.src = "Torso_images/Torso_Back_Highlights/back_head_HL.png"
+			
+			back1 = new Image(202,601)
+			back1.src = "Torso_images/Torso_Back_Highlights/back_neck_HL.png"
+			
+			back2 = new Image(202,601)
+			back2.src = "Torso_images/Torso_Back_Highlights/back_back_HL.png"
+			
+			back3 = new Image(202,601)
+			back3.src = "Torso_images/Torso_Back_Highlights/back_right_shoulder_HL.png"
+			
+			back4 = new Image(202,601)
+			back4.src = "Torso_images/Torso_Back_Highlights/back_left_shoulder_HL.png"      
+			
+			back5 = new Image(202,601)
+			back5.src = "Torso_images/Torso_Back_Highlights/back_blank_figure.png"			
+// load audio control cube images ******************************************************************************
+			orgAudioCube = new Image(151,150)
+			orgAudioCube.src = "Page_Elements/Audio_Controls_Cube.png"
+			
+			playHL = new Image(151,150)
+			playHL.src = "Page_Elements/Play_HL.png"
+			
+			refreshHL = new Image(151,150)
+			refreshHL.src = "Page_Elements/Refresh_HL.png"
+			
+			pauseHL = new Image(151,150)
+			pauseHL.src = "Page_Elements/Pause_HL.png"	
+// load home cube images ************************************************************************************		
+			home0 = new Image(153,152)
+			home0.src = "Page_Elements/Sidebar_Nav_Home_Cube.png"
+			
+			home1 = new Image(153,152)
+			home1.src = "Page_Elements/Sidebar_Nav_Home_Cube_backHL.png"
+			
+			home2 = new Image(153,152)
+			home2.src = "Page_Elements/Sidebar_Nav_Home_Cube_homeHL.png"
+			
+			home3 = new Image(153,152)
+			home3.src = "Page_Elements/Sidebar_Nav_Home_Cube_forwardHL.png"
+// load 123 cube images ************************************************************************************		
+			smallNav0 = new Image(151,150)
+			smallNav0.src = "Page_Elements/Sidebar_Nav_123_Cube.png"
+			
+			smallNav1 = new Image(151,150)
+			smallNav1.src = "Page_Elements/Sidebar_Nav_123_Cube_1HL.png"
+			
+			smallNav2 = new Image(151,150)
+			smallNav2.src = "Page_Elements/Sidebar_Nav_123_Cube_2HL.png"
+			
+			smallNav3 = new Image(151,150)
+			smallNav3.src = "Page_Elements/Sidebar_Nav_123_Cube_3HL.png"
+// load ? cube images ************************************************************************************		
+			question0 = new Image(151,151)
+			question0.src = "Page_Elements/Sidebar_Nav_Question_Cube.png"
+			
+			question1 = new Image(151,151)
+			question1.src = "Page_Elements/Sidebar_Nav_Question_CubeHL.png"	  
+// load result images ************************************************************************************		
+			result0 = new Image(171,155)
+			result0.src = "Page_Elements/Red_X.png"
+			
+			result1 = new Image(171,155)
+			result1.src = "Page_Elements/Green_Check.png"	 
+			
+// function for changing the front image when the mouse hovers over the part*******************************
+			function hoverOverFront(img) {
+			switch (img){
+				 case 0: 
+					document.getElementById("front").src = front0.src; return true; // highlight head
+					break;
+				 case 1: 
+					document.getElementById("front").src = front1.src; return true; // highlight neck
+					 break;
+				 case 2: 
+					document.getElementById("front").src = front2.src; return true; // highlight chest
+					 break;
+				 case 3: 
+					document.getElementById("front").src = front3.src; return true; // highlight stomach
+					break;
+				 case 4: 
+					document.getElementById("front").src = front4.src; return true; // highlight lap
+					 break;
+				 case 5: 
+					document.getElementById("front").src = front5.src; return true; // highlight right shoulder
+					 break;
+				 case 6: 
+					document.getElementById("front").src = front6.src; return true; // hightlight left shoulder
+					 break;
+				 default : document.write("default");
+				 }
+			}
+// function for changing the back image when the mouse hovers over the part **********************************
+			function hoverOverBack(img)
+			 {
+				switch (img)
+				{
+					 case 0: 
+						document.getElementById("back").src = back0.src; return true; // highlight head
+						break;
+					 case 1: 
+						document.getElementById("back").src  = back1.src; return true; // highlight neck
+						 break;
+					 case 2: 
+						document.getElementById("back").src  = back2.src; return true; // highlight back
+						 break;
+					 case 3: 
+						document.getElementById("back").src = back3.src; return true; // highlight right shoulder
+						break;
+					 case 4: 
+						document.getElementById("back").src  = back4.src; return true; // highlight left shoulder
+						 break;
+					 default : document.write("default");
+				}
+			}
+// function for changing to the original front image *********************************************************
+			function originalFront() {
+				document.getElementById("front").src  = front7.src; return true; 
+			}
+// function for changing to the original back image **********************************************************
+			function originalBack() 
+			{
+				document.getElementById("back").src  = back5.src; return true; 
+			}
+			
+			function play(phrase)
+			{
+				document.getElementById(phrase).play();
+			}
+
+			var correct = 0;
+			var total = 7;
+			var played = new Array(7);
+			var playPart;
+			var playCount = 0;
+		 	var currentPart = 0;
+			var clickRestrict = 0;
+			var result = 0;
+			var inLoop = 0;
+			var audioCase = 0;
+			var playRestrict = 0;
+			
+			function incrementAndCheck(clicked)
+			{
+				clickRestrict++;
+				if(clickRestrict == 1)
+				{
+					if (clicked == currentPart)
+					{
+						result =1;
+						play("right");
+						show(result);
+						correct++;
+					}
+					else 
+					{
+						result =0;
+						play("wrong");
+						show(result);
+					}
+	
+					if (playCount == 7)
+					{
+						var x=window.confirm('Test is over.\nCorrectly answered '+correct+' out of '+total+' total.\nWould you like to try again?');
+						if (x)
+						{
+							correct = 0;
+							playCount = 0;
+							for(var i = 0; i < 7; i++)
+							{
+								played[i] = 0;
+							}
+						}
+						else
+						{
+							alert('Goodbye.');
+							window.open ('Main_Page_Torso.html','_self',false) 
+						}
+					}
+					playRestrict = 1;
+					playPart = Math.floor(Math.random()*7);
+					var t=setTimeout("phraseSwitch(playPart)",2500);
+				}
+			}
+			
+			
+			function phraseSwitch(playPart)
+			{
+				if(pause != 1)
+				{
+					inLoop = 1;
+					audioCase = 2;
+					playRestrict = 0;
+					if(played[playPart] == 0)
+					{
+						played[playPart] = 1;
+						
+						switch (playPart)
+						{
+							case 0:
+								playCount++;
+								currentPart = 0;
+								play("myhead");
+								clickRestrict = 0;
+								break;
+							case 1:
+								playCount++;
+								currentPart = 1;
+								play("myneck");
+								clickRestrict = 0;
+								break;
+							case 2:
+								playCount++;
+								currentPart = 2;
+								play("mychest");
+								clickRestrict = 0;
+								break;
+							case 3:
+								playCount++;
+								currentPart = 3;
+								play("mystomach");
+								clickRestrict = 0;
+								break;
+							case 4:
+								playCount++;
+								currentPart = 4;
+								play("mylap");
+								clickRestrict = 0;
+								break;
+							case 5:
+								playCount++;
+								currentPart = 5;
+								play("myshoulder");
+								clickRestrict = 0;
+								break;
+							case 6:
+								playCount++;
+								currentPart = 6;
+								play("myback");
+								clickRestrict = 0;
+								break;
+							default : document.write("default");
+						}
+					}
+					else if(playCount < 8)
+					{
+						playPart = Math.floor(Math.random()*7);
+						phraseSwitch(playPart);
+					}
+				}
+			}
+			
+			function startTest()
+			{
+				for(var i = 0; i < 7; i++)
+				{
+					played[i] = 0;
+				}
+				
+				audioCase = 2;
+				originalAudioCube();
+				playPart = Math.floor(Math.random()*7);
+				phraseSwitch(playPart);
+			}
+			
+			function show(result)
+			{
+				switch(result)
+				{
+					case 0:
+						document.getElementById("resultImage0").style.display="block";
+						setTimeout("hide(result)", 750);  // .75 seconds
+						break;
+					case 1:
+						document.getElementById("resultImage1").style.display="block";
+						setTimeout("hide(result)", 750);  // .75 seconds
+						break;
+					default: document.write("default");
+				}
+			}
+			
+			function hide(result)
+			{
+				switch(result)
+				{
+					case 0:
+						document.getElementById("resultImage0").style.display="none";
+						break;
+					case 1:
+						document.getElementById("resultImage1").style.display="none";
+						break;
+					default: document.write("default");
+				}
+			}
+// function for the pause button ***************************************************************************		
+			function paused()
+			{
+				pause = 1;
+				audioCase = 1;
+				document.getElementById("audioCube").src = pauseHL.src; return true; // highlight pause
+			}
+// function for the play button either unpause or play ***************************************		
+			function unPausePlay()
+			{
+				if(pause == 1)
+				{
+					if(playRestrict == 1)
+					{
+						pause = 0;
+						phraseSwitch(playPart);
+					}
+				}
+				else
+				{
+					if(inLoop == 0)
+					{
+						inLoop = 1;
+						audioCase = 2;
+						startTest();
+					}
+				}
+			}
+// function for changing the audio cube image when the mouse hovers over the part **********************************
+			function hoverOverAudioCube(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("audioCube").src = refreshHL.src; return true; // highlight refresh
+						break;
+					 case 2: 
+						document.getElementById("audioCube").src = playHL.src; return true; // highlight play
+						 break;
+					 case 3: 
+						document.getElementById("audioCube").src = pauseHL.src; return true; // highlight pause
+						 break;
+					 default : document.write("default");
+				}
+			}
+// function for changing to the original audio cube image *********************************************************
+			function originalAudioCube()
+			{
+				switch(audioCase)
+				{
+					case 0:
+						document.getElementById("audioCube").src = orgAudioCube.src; return true; 
+						break;
+					case 1:
+						document.getElementById("audioCube").src = pauseHL.src; return true; 
+						break;
+					case 2:
+						document.getElementById("audioCube").src = playHL.src; return true; 
+						break;
+					 default : document.write("default");
+				}
+			}
+// function for highlighting the sidebar home cube image when the mouse hovers over the part **********************************
+			function hoverOverHome(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("sideHome").src = home1.src; return true; // highlight back arrow
+						break;
+					 case 2: 
+						document.getElementById("sideHome").src = home2.src; return true; // highlight home
+						 break;
+					 case 3: 
+						document.getElementById("sideHome").src = home3.src; return true; // highlight forward arrow
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original home cube image *********************************************************
+			function originalHome()
+			{
+				document.getElementById("sideHome").src = home0.src; return true; 
+			}
+			
+// function for highlighting the sidebar 123 cube image when the mouse hovers over the part **********************************
+			function hoverOverSide123(img)
+			{
+				switch (img)
+				{
+					 case 1: 
+						document.getElementById("side123").src = smallNav1.src; return true; // highlight 1
+						break;
+					 case 2: 
+						document.getElementById("side123").src = smallNav2.src; return true; // highlight 2
+						 break;
+					 case 3: 
+						document.getElementById("side123").src = smallNav3.src; return true; // highlight 3
+						 break;
+					 default : document.write("default");
+				}
+			}
+			
+// function for changing to the original side 123 cube image *********************************************************
+			function originalSide123()
+			{
+				document.getElementById("side123").src = smallNav3.src; return true; 
+			}
+			
+// function for highlighting the question cube image when the mouse hovers over the part **********************************
+			function hoverOverQuestion()
+			{
+				document.getElementById("question").src = question1.src; return true; // highlight ?
+			}
+			
+// function for changing to the original question cube image *********************************************************
+			function originalQuestion()
+			{
+				document.getElementById("question").src = question0.src; return true; 
+			}
+	  </SCRIPT>
+    </head>
+    <body>
+	
+<!--Load audio language sample files .mp3 and .ogg format for cross compatibility *************************************************************-->
+		  <div title="audiofiles">
+<!--Right and Wrong sound audio files *************************************************************-->
+          	<audio id="right" hidden=true>
+				<source src="Torso_sounds/rightSound.mp3" type="audio/mpeg"/>
+                <source src="Torso_sounds/rightSound.ogg" type="audio/ogg"/></audio>
+			<audio id="wrong" hidden=true>
+				<source src="Torso_sounds/wrongSound.mp3" type="audio/mpeg"/>
+                <source src="Torso_sounds/wrongSound.ogg" type="audio/ogg"/></audio>
+<!--Ni- person marking audio files *************************************************************-->
+			<audio id="myhead" hidden=true >
+            	<source src="Torso_sounds/myhead.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/myhead.ogg" type="audio/ogg"/></audio>
+			<audio id="myneck" hidden=true>
+                <source src="Torso_sounds/myneck.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/myneck.ogg" type="audio/ogg"/></audio>
+			<audio id="mychest" hidden=true>
+                <source src="Torso_sounds/mychest.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/mychest.ogg" type="audio/ogg"/></audio>
+			<audio id="mystomach" hidden=true>
+                <source src="Torso_sounds/mystomach.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/mystomach.ogg" type="audio/ogg"/> </audio>
+			<audio id="mylap" hidden=true>
+                <source src="Torso_sounds/mylap.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/mylap.ogg" type="audio/ogg"/></audio>
+            <audio id="myshoulder" hidden=true>
+                <source src="Torso_sounds/myshoulder.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/myshoulder.ogg" type="audio/ogg"/></audio>
+			<audio id="myback" hidden=true>
+                <source src="Torso_sounds/myback.mp3" type="audio/mpeg"/> 
+                <source src="Torso_sounds/myback.ogg" type="audio/ogg"/></audio>
+<!--Ki- person marking audio files *************************************************************-->
+			<audio id="yourhead" hidden=true >
+            	<source src="Torso_sounds/yourhead.mp3" type="audio/mpeg"/>
+                <source src="Torso_sounds/yourhead.ogg" type="audio/ogg"/></audio>
+            <audio id="yourneck" hidden=true >
+				<source src="Torso_sounds/yourneck.mp3" type="audio/mpeg"/>
+                <source src="Torso_sounds/yourneck.ogg" type="audio/ogg"/></audio>
+            <audio id="yourchest" hidden=true >
+				<source src="Torso_sounds/yourchest.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/yourchest.ogg" type="audio/ogg"/></audio>
+			<audio id="yourstomach" hidden=true >
+            	<source src="Torso_sounds/yourstomach.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/yourstomach.ogg" type="audio/ogg"/></audio>
+			<audio id="yourlap" hidden=true >
+            	<source src="Torso_sounds/yourlap.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/yourlap.ogg" type="audio/ogg"/></audio>
+            <audio id="yourshoulder" hidden=true >
+            	<source src="Torso_sounds/yourshoulder.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/yourshoulder.ogg" type="audio/ogg"/></audio>
+			<audio id="yourback" hidden=true >
+            	<source src="Torso_sounds/yourback.mp3" type="audio/mpeg">
+            	<source src="Torso_sounds/yourback.ogg" type="audio/ogg"></audio>
+<!--A- person marking audio files *************************************************************-->
+			<audio id="hishead" hidden=true >
+            	<source src="Torso_sounds/hishead.mp3" type="audio/mpeg"/>
+                <source src="Torso_sounds/hishead.ogg" type="audio/ogg"/></audio>
+            <audio id="hisneck" hidden=true >
+				<source src="Torso_sounds/hisneck.mp3" type="audio/mpeg"/>
+                <source src="Torso_sounds/hisneck.ogg" type="audio/ogg"/></audio>
+            <audio id="hischest" hidden=true >
+				<source src="Torso_sounds/hischest.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/hischest.ogg" type="audio/ogg"/></audio>
+			<audio id="hisstomach" hidden=true >
+            	<source src="Torso_sounds/hisstomach.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/hisstomach.ogg" type="audio/ogg"/></audio>
+			<audio id="hislap" hidden=true >
+            	<source src="Torso_sounds/hislap.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/hislap.ogg" type="audio/ogg"/></audio>
+            <audio id="hisshoulder" hidden=true >
+            	<source src="Torso_sounds/hisshoulder.mp3" type="audio/mpeg"/>
+            	<source src="Torso_sounds/hisshoulder.ogg" type="audio/ogg"/></audio>
+			<audio id="hisback" hidden=true >
+            	<source src="Torso_sounds/hisback.mp3" type="audio/mpeg">
+            	<source src="Torso_sounds/hisback.ogg" type="audio/ogg"></audio>
+		</div>
+		
+<!-- Sidebar Navigation Begins *************************************************************************-->
+		<nav id="sidebarNavigation">
+            <div id="sideHomeNavCube"> <img src="Page_Elements/Sidebar_Nav_Home_Cube.png" id="sideHome" alt=" sidebar home navigation cube" usemap="#Map2">
+				<map name="Map2">
+                    <area shape="poly" coords="76,21,127,49,77,77,26,49" href="Main_Page_Torso.html" alt="home link" title="Home" onMouseOver="hoverOverHome(2)" onMouseOut="originalHome()">
+                    <area shape="poly" coords="24,54,75,81,75,132,24,104" href="Try_Page_Torso.html" alt="back link" title="Back" onMouseOver="hoverOverHome(1)" onMouseOut="originalHome()">
+                    <area shape="poly" coords="129,54,79,81,80,131,130,103" href="Main_Page_Torso.html" alt="forward link" title="Forward" onMouseOver="hoverOverHome(3)" onMouseOut="originalHome()">
+				</map>
+			</div>
+            <div id="side123NavCube"> <img src="Page_Elements/Sidebar_Nav_123_Cube_3HL.png" id="side123" alt="sidebar 123 navigation cube" usemap="#Map3">
+				<map name="Map3">
+                    <area shape="poly" coords="24,52,74,79,74,127,24,101" href="Observe_Page_Torso.html" alt="1: Observe link" title="1: Observe" onMouseOver="hoverOverSide123(1)" onMouseOut="originalSide123()">
+                    <area shape="poly" coords="76,21,28,48,77,76,124,49" href="Try_Page_Torso.html" alt="2: Try link" title="2: Try" onMouseOver="hoverOverSide123(2)" onMouseOut="originalSide123()">
+                    <area shape="poly" coords="128,51,78,79,79,127,128,100" href="Test_Page_Torso.html" alt="3: Test link" title="3: Test" onMouseOver="hoverOverSide123(3)" onMouseOut="originalSide123()">
+				</map>
+            </div>
+            <div id="sideQuestionCube"> <img src="Page_Elements/Sidebar_Nav_Question_Cube.png" id="question" alt="sidebar help cube" usemap="#Map4">
+				<map name="Map4">
+					<area shape="poly" coords="76,21,25,50,23,101,77,129,130,100,128,49" href="Help_Page_Test.html" alt="Help Information link" title="Help" onMouseOver="hoverOverQuestion()" onMouseOut="originalQuestion()">
+ 				</map>
+			</div>
+        </nav>
+		<div id="torsoFigureBG"><img src="Page_Elements/BG_block.png" alt="background block">
+			<section id="torsoFigures"> 
+<!--Start content area front figure image and mapping***********************************************************-->
+		<div id="torsoFrontImage"><img src="Torso_images/Torso_Front_Highlights/front_blank_figure.png" alt="Front Human Figure Outline" border="0" usemap="#frontMap" id="front">
+          <map name="frontMap">
+            <area shape="poly" coords="92,3,80,13,77,29,79,44,85,58,93,67,103,72,116,64,124,53,128,37,126,18,117,5,104,1" alt="front head" onMouseOver="hoverOverFront(0)"  onMouseOut="originalFront()" onclick="incrementAndCheck(0)">
+            <area shape="poly" coords="60,99,69,101,81,103,91,104,100,108,108,105,117,103,131,101,136,99,129,95,122,89,120,77,119,66,120,62,111,69,105,73,98,71,91,67,86,63,87,72,86,81,83,88,73,94" alt="front neck" onMouseOver="hoverOverFront(1)"  onMouseOut="originalFront()" onclick="incrementAndCheck(1)">
+            <area shape="poly" coords="43,126,44,141,44,154,52,161,46,159,47,171,50,184,53,197,53,207,75,207,92,207,109,207,125,207,143,207,145,201,149,184,151,171,153,153,147,158,153,151,153,140,152,131,149,126,143,121,143,113,140,106,134,101,121,103,108,105,101,109,92,104,74,102,62,100,58,106,53,116,49,122" alt="chest" onMouseOver="hoverOverFront(2)"  onMouseOut="originalFront()" onclick="incrementAndCheck(2)">
+            <area shape="poly" coords="43,279" href="#">
+            <area shape="poly" coords="45,278,158,278,153,259,149,240,144,225,144,207,53,207,55,220,53,242" alt="stomach" onMouseOver="hoverOverFront(3)"  onMouseOut="originalFront()" onclick="incrementAndCheck(3)">
+            <area shape="poly" coords="43,278,158,278,158,308,157,349,103,349,102,322,100,318,98,323,95,349,40,349,40,308" alt="lap" onMouseOver="hoverOverFront(4)"  onMouseOut="originalFront()" onclick="incrementAndCheck(4)">
+            <area shape="poly" coords="154,135" href="#">
+            <area shape="poly" coords="135,100,148,101,158,103,165,109,170,121,175,131,166,136,155,137,150,127,144,122,144,113,139,104" alt="shoulder" onMouseOver="hoverOverFront(5)"  onMouseOut="originalFront()" onclick="incrementAndCheck(5)">
+            <area shape="poly" coords="61,99,52,100,43,102,34,109,29,122,27,129,35,134,43,134,44,126,49,121,55,114,59,105" alt="shoulder" onMouseOver="hoverOverFront(6)"  onMouseOut="originalFront()" onclick="incrementAndCheck(5)">
+          </map>
+	  </div>
+<!--Start content area back figure image and mapping **********************************************************-->
+		<div id="torsoBackImage"><img src="Torso_images/Torso_Back_Highlights/back_blank_figure.png" alt="Back Human Figure Outline" border="0" usemap="#backMap" id="back">
+          <map name="backMap">
+            <area shape="poly" coords="80,46,87,62,99,72,111,69,117,64,123,56,128,39,125,16,116,5,105,1,92,4,84,9,77,24" alt="back of head" onclick="incrementAndCheck(0)" onMouseOver="hoverOverBack(0)" onMouseOut="originalBack()">
+            <area shape="poly" coords="60,100,70,102,84,104,96,105,101,108,107,105,115,103,128,102,137,101,131,97,125,93,121,85,120,74,120,63,115,68,109,71,100,73,94,69,88,64,87,70,86,78,84,87,75,93" alt="back of neck" onclick="incrementAndCheck(1)" onMouseOver="hoverOverBack(1)" onMouseOut="originalBack()">
+            <area shape="poly" coords="46,134,46,159,48,181,51,194,55,211,54,232,50,251,47,268,43,281,158,280,155,264,151,245,146,229,145,211,150,187,153,165,153,146,152,130,146,120,142,109,135,101,126,103,114,103,103,109,95,105,79,103,66,101,60,104,55,117" alt="back" onclick="incrementAndCheck(6)" onMouseOver="hoverOverBack(2)" onMouseOut="originalBack()">
+            <area shape="poly" coords="136,100,147,102,157,102,164,109,170,119,174,130,170,135,158,137,152,128,146,117,142,109" alt="shoulder" onclick="incrementAndCheck(5)" onMouseOver="hoverOverBack(3)" onMouseOut="originalBack()">
+            <area shape="poly" coords="62,100,52,101,42,104,34,114,29,123,28,130,45,137,46,131,53,121,60,108" alt="shoulder" onclick="incrementAndCheck(5)" onMouseOver="hoverOverBack(4)" onMouseOut="originalBack()">
+          </map>
+		</div>
+	</section>
+    <div id="resultImage0"><img src="Page_Elements/Red_X.png"></div>
+    <div id="resultImage1"><img src="Page_Elements/Green_Check.png"></div>
+    <section id="controls">  
+	  <div id="audioControlCube"><img src="Page_Elements/Audio_Controls_Cube.png" alt="Audio Control Cube" id="audioCube" usemap="#Map5">
+        <map name="Map5">
+          <area shape="poly" coords="75,21,26,48,77,75,124,48" href="#" alt="Play" onMouseOver="hoverOverAudioCube(2)" onMouseOut="originalAudioCube()" onclick="unPausePlay()" title="Play">
+          <area shape="poly" coords="24,52,24,101,74,127,74,79"  href="Test_Page_Torso.html" alt="Restart" onMouseOver="hoverOverAudioCube(1)" onMouseOut="originalAudioCube()" title="Restart">
+          <area shape="poly" coords="128,52,78,79,79,128,129,100" alt="Pause" onMouseOver="hoverOverAudioCube(3)" onMouseOut="originalAudioCube()" onclick="paused()" title="Pause">
+        </map>
+	  </div>
+	</section> 
+	</div>
+	<Script>
+		var t3=setTimeout("startTest()",1500);
+	</Script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+
+body {
+	position:relative;
+	background-image:url(Page_Elements/Cube_Slice_BG.png);
+ 	background-repeat:repeat-x;
+	min-width:920px;
+	background-position:left top;
+	background-color: #FFF;
+}
+img {
+	border-style:none;
+}
+#sideHomeNavCube{
+ position:absolute;
+ left:7px;
+ top:5px;
+}
+#side123NavCube{
+ position:absolute;
+ left:7px;
+ top:157px;
+}
+#sideQuestionCube{
+ position:absolute;
+ left:7px;
+ top:307px;
+ 
+}
+#torsoFigureBG{
+ position:absolute;
+ left:40%;
+ top:10px;
+ margin-left: -205px;
+ z-index:0;
+	
+}
+#torsoFrontImage{
+ position:absolute;
+ left:40%;
+ top:25px;
+ margin-left: -240px;
+ z-index:1;
+
+}
+#torsoBackImage{
+ position:absolute;
+ left:50%;
+ top:25px;
+ margin-left: -80px;
+ z-index:1;
+
+}
+#nikiaCube{
+ position:absolute;
+ left:85%;
+ top:325px;
+ margin-left: -65px;
+ 
+}
+#audioControlCube{
+ position:absolute;
+ left:85%;
+ top:475px;
+ margin-left: -65px;
+}

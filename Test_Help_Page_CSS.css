@@ -1,0 +1,114 @@
+body {
+	position:relative;
+	background-image:url(Page_Elements/Cube_Slice_BG.png);
+	background-repeat:repeat-x;
+	min-width:920px;
+	background-position:left top;
+	background-color: #FFF;
+}
+img{
+	border-style:none;
+}
+h1{
+	font-size:250%
+	font-weight:bold;
+}
+h2{
+	font-size:200%
+	font-weight:bold;
+}
+h3{
+	font-size:125%
+	font-weight:bold;
+}
+p{
+	font-size:110%
+}
+#h11{
+	position:absolute;
+	left:38%;
+	top:10px;
+	margin-left: -240px;
+	z-index:1;
+}
+#p1{
+	position:absolute;
+	left:40%;
+	top:65px;
+	margin-left: -240px;
+	z-index:1;
+}
+#ul0{
+	position:absolute;
+	left:40%;
+	top:235px;
+	margin-left: -240px;
+	z-index:1;
+}
+#h21{
+	position:absolute;
+	left:38%;
+	top:355px;
+	margin-left: -240px;
+	z-index:1;
+}
+#p2{
+	position:absolute;
+	left:40%;
+	top:395px;
+	margin-left: -240px;
+	z-index:1;
+}
+#h31{
+	position:absolute;
+	left:40%;
+	top:435px;
+	margin-left: -240px;
+	z-index:1;
+}
+#p3{
+	position:absolute;
+	left:40%;
+	top:465px;
+	margin-left: -240px;
+	z-index:1;
+}
+#ul1{
+	position:absolute;
+	left:43%;
+	top:505px;
+	margin-left: -240px;
+	z-index:1;
+	font-size:110%
+}
+
+#sideHomeNavCube{
+ position:absolute;
+ left:7px;
+ top:5px;
+}
+#side123NavCube{
+ position:absolute;
+ left:7px;
+ top:157px;
+}
+#sideQuestionCube{
+ position:absolute;
+ left:7px;
+ top:307px;
+ 
+}
+#whiteBG {
+	position:absolute;
+	left:40%;
+	top:10px;
+	margin-left: -205px;
+	z-index:0;
+}
+#helpAudioControl{
+	position:absolute;
+	left:113%;
+	top:515px;
+	margin-left: -240px;
+	z-index:2;
+}
